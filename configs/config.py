@@ -1,4 +1,7 @@
-basedir = '/home/ul/plot_drill/drill_data_analyzer/'
+import os
+
+# Используем относительный путь или определяем через переменную окружения
+basedir = os.getenv('DRILL_DATA_DIR', os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
 
 # Mapping dictionaries
 log_to_video = {
