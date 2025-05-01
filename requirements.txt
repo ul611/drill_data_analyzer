@@ -1,4 +1,11 @@
 streamlit
+torch>=2.0
+torchaudio
+wandb
+transformers
+pytorch-lightning
+sklearn
+omegaconf
 numpy
 matplotlib
 pandas
@@ -6,3 +13,4 @@ scipy
 opencv-python
 ffmpeg-python
 librosa 
+wget 

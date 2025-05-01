@@ -1,0 +1,8 @@
+data:
+  sample_rate: 44100
+  segment_length: 1  # секунды
+  batch_size: 32
+  augment: False       # Аугментации: шум, pitch-shift
+  paths:
+    train: "drill_data_analyzer/data_to_train/train"
+    val: "drill_data_analyzer/data_to_train/val"

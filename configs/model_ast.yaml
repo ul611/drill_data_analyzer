@@ -1,0 +1,8 @@
+model:
+  name: "AST"
+  pretrained: True
+  num_classes: 4
+  learning_rate: 3e-4
+  freeze_backbone: True  # Заморозка предобученных слоёв
+
+epochs: 25

@@ -1,4 +1,4 @@
-basedir = '/home/ul/drill_data_analyzer/'
+basedir = '/home/ul/plot_drill/drill_data_analyzer/'
 
 # Mapping dictionaries
 log_to_video = {
@@ -16,3 +16,7 @@ video_audio_ms_deltas = {
     1: 0.63, 2: -0.04, 3: -0.02, 4: 0.25,
     5: 0.47, 6: 0.72, 7: 0.63
 }
+
+# video_and_spec_with_frames
+window_seconds = 10.0  # Window width in seconds
+graph_height = 600 
