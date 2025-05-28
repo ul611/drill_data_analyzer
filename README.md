@@ -1,95 +1,92 @@
-# 📊 Анализатор Данных Дрели
+# 📊 Drill Data Analyzer
 
-Проект для анализа реальных данных, полученных в ходе работы с дрелью, включая обработку видео и аудио материалов.
+A toolset for analyzing real-world drill operation data, including video and audio processing.
 
-## 📋 Содержание
+## 📋 Contents
 
-- [Описание](#описание)
-- [Установка](#установка)
-- [Инструменты](#инструменты)
-- [Технические детали](#технические-детали)
-- [Структура проекта](#структура-проекта)
+- [Overview](#overview)
+- [Installation](#installation)
+- [Tools](#tools)
+- [Tech Details](#tech-details)
+- [Project Structure](#project-structure)
 
-## 📝 Описание
+## 📝 Overview
 
-Данный проект представляет собой набор инструментов для:
-- анализа данных с датчиков и видеоматериалов при работе с дрелью
-- извлечения и обработки аудио из видеофайлов
-- визуализации реальных данных в виде графиков и спектрограмм
-- мониторинга работы дрели в различных условиях
+This project provides tools for:
+- Analyzing sensor data and video recordings of drill operations
+- Extracting and processing audio from video files
+- Visualizing data through graphs and spectrograms
+- Monitoring drill performance under various conditions
 
-## 🔧 Установка
+## 🔧 Installation
 
 ```bash
-# Клонирование репозитория
+# Clone repository
 git clone https://github.com/username/drill_data_analyzer.git
 cd drill_data_analyzer
 
-# Установка зависимостей
+# Install dependencies
 pip install -r requirements.txt
 ```
 
-## 🔧 Инструменты
+## 🔧 Tools
 
-### 1. Анализатор видео с дрелью (monitor_drill.py)
+### 1. Drill Video Analyzer (monitor_drill.py)
 
 ```bash
 python monitor_drill.py --log-number LOG_NUMBER
 ```
+Analyzes drill operation videos with corresponding log data.
 
-Анализирует видеозаписи работы дрели, сопоставляя их с данными из логов.
-
-### 2. Извлечение аудио из видео (mov2wav.py)
+### 2. Audio Extractor (mov2wav.py)
 
 ```bash
 python mov2wav.py --video VIDEO_PATH --audio AUDIO_PATH
 ```
+Extracts audio tracks from video files for analysis.
 
-Извлекает аудиотрек из видеофайла для дальнейшего анализа.
-
-### 3. Визуализация данных (video_and_spec_with_frames.py, st_slider_plots_and_video.py)
+### 3. Data Visualization (video_and_spec_with_frames.py, st_slider_plots_and_video.py)
 
 ```bash
 streamlit run st_slider_plots_and_video.py
 ```
+Interactive data and video visualization using Streamlit.
 
-Интерактивная визуализация данных и видео в веб-интерфейсе Streamlit.
+## 🔬 Tech Details
 
-## 🔬 Технические детали
+Key technologies used:
+- **OpenCV** for video processing
+- **FFmpeg** for media handling
+- **Librosa** for audio analysis
+- **NumPy/SciPy** for data processing
+- **Matplotlib** for visualization
+- **Streamlit** for web interface
 
-Проект использует следующие библиотеки и технологии:
-- **OpenCV** для обработки видео
-- **FFmpeg** для работы с медиафайлами
-- **Librosa** для анализа аудио
-- **NumPy** и **SciPy** для обработки данных
-- **Matplotlib** для визуализации
-- **Streamlit** для интерактивного интерфейса
-
-## 📁 Структура проекта
+## 📁 Project Structure
 
 ```
 drill_data_analyzer/
-├── monitor_drill.py          # Анализатор видео с дрелью
-├── mov2wav.py                # Извлечение аудио из видео
-├── video_and_spec_with_frames.py  # Обработка видеокадров
-├── st_slider_plots_and_video.py   # Интерактивные графики и видео
-├── plot_existing_audio.py    # Построение графиков для аудио
-├── configs/                  # Конфигурационные файлы
-│   └── config.py             # Основные настройки
-└── requirements.txt          # Зависимости проекта
+├── monitor_drill.py          # Drill video analyzer
+├── mov2wav.py                # Audio extraction
+├── video_and_spec_with_frames.py  # Video frame processing
+├── st_slider_plots_and_video.py   # Interactive plots
+├── plot_existing_audio.py    # Audio visualization
+├── configs/                  # Configuration files
+│   └── config.py             # Main settings
+└── requirements.txt          # Dependencies
 ```
 
-## 📊 Данные
+## 📊 Data Requirements
 
-Для работы с проектом требуются:
-- Видеофайлы с записью работы дрели
-- Логи данных с датчиков
-- Аудиофайлы (могут быть извлечены из видео)
+The project works with:
+- Drill operation videos
+- Sensor data logs
+- Audio files (can be extracted from videos)
 
-Структура каталогов для данных:
+Recommended data structure:
 ```
 data/
-├── videos/      # Видеофайлы (*.MOV)
-├── audios/      # Аудиофайлы (*.wav)
-└── logs/        # Логи датчиков
-``` 
+├── videos/      # Video files (*.MOV)
+├── audios/      # Audio files (*.wav)
+└── logs/        # Sensor logs
+```
