@@ -1,4 +1,4 @@
-basedir = '/home/ul/plot_drill/drill_data_analyzer/'
+basedir = './'
 
 # Mapping dictionaries
 log_to_video = {
